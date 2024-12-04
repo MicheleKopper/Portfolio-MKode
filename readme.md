@@ -73,8 +73,94 @@ function App() {
 
 export default App;
 ```
+
 12 - Rodar o script dev para subir o frontEnd. No terminal acessar o link local (ctrl + clique) http://localhost:5173/
 
 ```bash
 npm run dev
+```
+
+# Instalação MUI Material
+
+01 - Instalar o MUI Material
+
+```bash
+npm install @mui/material @emotion/react @emotion/styled
+```
+
+02 - Instalar os icones
+
+```bash
+npm install @mui/icons-material
+```
+
+03 - Importar o CSS baseline dentro do arquivo `App.tsx`
+
+```bash
+import { CssBaseline } from "@mui/material";
+import { AppRoutes } from "./config/routes/AppRoutes";
+
+function App() {
+  return (
+    <>
+      <CssBaseline />
+      <AppRoutes />
+    </>
+  );
+}
+
+export default App;
+```
+
+04 - Dentro da pasta `configs` criar a pasta `global`, criar o arquivo `GlobalStyles.tsx` e inserir o código abaixo:
+
+```bash
+import { GlobalStyles } from "@mui/material";
+import { red } from "@mui/material/colors";
+
+const styles = {
+  "*": {
+    margin: 0,
+    padding: 0,
+    background: red,
+  },
+};
+
+export function GlobalStyle() {
+  return <GlobalStyles styles={styles} />;
+}
+```
+
+05 - Importar a função `GlobalStyle` dentro de `App.tsx`. Fazer a estilização
+
+```bash
+import { GlobalStyles } from "@mui/material";
+
+const styles = {
+  "*": {
+    margin: 0,
+    padding: 0,
+    background: "blue",
+  },
+};
+
+export function GlobalStyle() {
+  return <GlobalStyles styles={styles} />;
+}
+```
+
+06 - Instalar fontes
+
+```bash
+npm install @fontsource/NOME DA FONTE
+```
+
+07 - Importar as fontes no `GlobalStyles.tsx` e adicionar no `styles`, ex: `fontFamily: "Lato, sans-serif"`
+
+```bash
+import "@fontsource/lato/100.css";
+import "@fontsource/lato/300.css";
+import "@fontsource/lato/400.css";
+import "@fontsource/lato/700.css";
+import "@fontsource/lato/900.css";
 ```
