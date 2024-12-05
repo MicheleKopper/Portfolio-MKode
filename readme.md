@@ -135,12 +135,19 @@ export function GlobalStyle() {
 
 ```bash
 import { GlobalStyles } from "@mui/material";
+import "@fontsource/lato/100.css";
+import "@fontsource/lato/300.css";
+import "@fontsource/lato/400.css";
+import "@fontsource/lato/700.css";
+import "@fontsource/lato/900.css";
+import { CSSObject } from "@emotion/react";
 
-const styles = {
+const styles: Record<string, CSSObject> = {
   "*": {
     margin: 0,
     padding: 0,
     background: "blue",
+    fontFamily: "Lato, sans-serif",
   },
 };
 
