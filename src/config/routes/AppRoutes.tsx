@@ -1,10 +1,10 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import { ButtonAppBar } from "../../pages/Home";
+import { Home } from "../../pages/Home";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <ButtonAppBar />,
+    element: <Home />,
   },
   {
     path: "/*",
