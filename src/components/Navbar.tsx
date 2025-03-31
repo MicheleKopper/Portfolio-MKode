@@ -21,19 +21,10 @@ import "@fontsource/lato/400.css";
 import "@fontsource/lato/700.css";
 import "@fontsource/lato/900.css";
 
-// import { TransitionProps } from "@mui/material/transitions";
 
 export function Navbar() {
-  // const Transition = React.forwardRef(function Transition(
-  //   props: TransitionProps & {
-  //     children: React.ReactElement<unknown>;
-  //   },
-  //   ref: React.Ref<unknown>
-  // ) {
-  //   return <Slide direction="up" ref={ref} {...props} />;
-  // });
 
-  const [open, setOpen] = React.useState(false);
+ const [open, setOpen] = React.useState(false);
 
   const handleClickOpen = () => {
     setOpen(true);
@@ -200,6 +191,7 @@ export function Navbar() {
             justifyContent: "center",
             alignItems: "center",
             gap: "50px",
+            width: "100%",
           }}
         >
           <Typography sx={typographyStyles} component={Link} to="/">

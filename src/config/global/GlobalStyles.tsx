@@ -7,16 +7,25 @@ import "@fontsource/lato/300.css";
 import "@fontsource/lato/400.css";
 import "@fontsource/lato/700.css";
 import "@fontsource/lato/900.css";
+import "@fontsource/big-shoulders-display/100.css";
+import "@fontsource/big-shoulders-display/200.css";
+import "@fontsource/big-shoulders-display/300.css";
+import "@fontsource/big-shoulders-display/400.css";
+import "@fontsource/big-shoulders-display/500.css";
+import "@fontsource/big-shoulders-display/600.css";
+import "@fontsource/big-shoulders-display/700.css";
+import "@fontsource/big-shoulders-display/800.css";
+import "@fontsource/big-shoulders-display/900.css";
 
 const styles: Record<string, CSSObject> = {
   "*": {
     margin: 0,
     padding: 0,
-    fontFamily: "Anonymous Pro, monospace, Lato, sans-serif",
+    fontFamily: '"Big Shoulders Display", sans-serif',
   },
 
   body: {
-    backgroundColor: "#f4f4f4",
+    backgroundColor: "#000000",
     height: "100vh",
   },
 };
