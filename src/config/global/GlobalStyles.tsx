@@ -21,13 +21,34 @@ const styles: Record<string, CSSObject> = {
   "*": {
     margin: 0,
     padding: 0,
-    fontFamily: '"Big Shoulders Display", sans-serif',
   },
 
   body: {
     backgroundColor: "#000000",
     height: "100vh",
+    fontFamily: '"Lato", sans-serif',
   },
+
+  h1: {
+    fontFamily: '"Big Shoulders Display", sans-serif',
+  },
+
+  h2: {
+    fontFamily: '"Big Shoulders Display", sans-serif',
+  },
+
+  h3: {
+    fontFamily: '"Big Shoulders Display", sans-serif',
+  },
+
+  h4: {
+    fontFamily: '"Big Shoulders Display", sans-serif',
+  },
+
+  h5: {
+    fontFamily: '"Big Shoulders Display", sans-serif',
+  },
+
 };
 
 export function GlobalStyle() {

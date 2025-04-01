@@ -103,7 +103,7 @@ export function Projects() {
         }}
       >
         {projects.map((project, index) => (
-          <Grid2 key={index} display="flex" justifyContent="center">
+          <Grid2 key={index} sx={{ display: "flex", justifyContent: "center" }}>
             <Card
               sx={{
                 display: "flex",
