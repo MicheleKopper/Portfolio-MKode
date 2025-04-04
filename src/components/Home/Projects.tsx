@@ -69,8 +69,8 @@ export function Projects() {
           sx={{
             textAlign: "start",
             color: "#FF008E",
-            marginLeft: "50px",
             fontFamily: '"Big Shoulders Display", sans-serif',
+           
             fontSize: "32px",
             fontWeight: "bold",
             display: "flex",
@@ -167,18 +167,18 @@ export function Projects() {
                 <Button
                   variant="outlined"
                   sx={{
-                    color: "#ffffff", 
-                    borderColor: "#ffffff", 
+                    color: "#ffffff",
+                    borderColor: "#ffffff",
                     fontWeight: "bold",
                     textTransform: "none",
                     fontSize: "12px",
                     fontFamily: '"Lato", sans-serif',
                     borderRadius: 5,
-                    transition: "all 0.3s ease-in-out", 
+                    transition: "all 0.3s ease-in-out",
                     "&:hover": {
-                      backgroundColor: "transparent", 
-                      borderColor: "#FF008E", 
-                      color: "#FF008E", 
+                      backgroundColor: "transparent",
+                      borderColor: "#FF008E",
+                      color: "#FF008E",
                     },
                     marginTop: "20px",
                     width: "150px",

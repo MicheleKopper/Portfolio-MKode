@@ -25,5 +25,6 @@ export const Theme = createTheme({
       fontWeight: "600",
       color: "#505050",
     },
+   
   },
 });

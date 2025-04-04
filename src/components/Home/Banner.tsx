@@ -1,5 +1,5 @@
 import { Box, Typography } from "@mui/material";
-import banner from "../assets/banner.jpg";
+import banner from "../../../public/banner.jpg";
 
 export function Banner() {
   return (

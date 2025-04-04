@@ -1,16 +1,8 @@
-import { Grid2, ThemeProvider } from "@mui/material";
-import {
-  Box,
-  Card,
-  CardContent,
-  Container,
- 
-  Typography,
-} from "@mui/material";
-import { Theme } from "../config/Themes/Theme";
+import { Button, Grid2, ThemeProvider } from "@mui/material";
+import { Box, Card, CardContent, Container, Typography } from "@mui/material";
+import { Theme } from "../../config/Themes/Theme";
 
-
-export function Experience() {
+export function Project01() {
   const experiences = [
     {
       position: "Desenvolvedora Full Stack | Designer",
@@ -44,7 +36,7 @@ export function Experience() {
 
   return (
     <ThemeProvider theme={Theme}>
-      <Container sx={{ py: 5, maxWidth: "100%", overflowX: "hidden" }}>
+      <Container sx={{ maxWidth: "100%", overflowX: "hidden" }}>
         {/* Título */}
         <Grid2 container alignItems="center">
           <Typography
@@ -139,6 +131,25 @@ export function Experience() {
             </Grid2>
           ))}
         </Grid2>
+        {/* Link do Projeto */}
+        <Box textAlign="center" mt={2}>
+          <Typography variant="h6" fontWeight="bold" color="white">
+            Acesse o projeto:
+          </Typography>
+          <Button
+            variant="contained"
+            href="https://lnkd.in/dMf9mYw3"
+            target="_blank"
+            sx={{
+              backgroundColor: "#FF008E",
+              color: "white",
+              mt: 1,
+              "&:hover": { backgroundColor: "#D00070" },
+            }}
+          >
+            Ver Landing Page no ar
+          </Button>
+        </Box>
       </Container>
     </ThemeProvider>
   );

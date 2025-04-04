@@ -7,7 +7,7 @@ import {
   ThemeProvider,
   Typography,
 } from "@mui/material";
-import { Theme } from "../config/Themes/Theme";
+import { Theme } from "../../config/Themes/Theme";
 
 export function Training() {
   const training = [

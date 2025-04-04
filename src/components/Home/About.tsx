@@ -5,7 +5,7 @@ import {
   Typography,
   ThemeProvider,
 } from "@mui/material";
-import { Theme } from "../config/Themes/Theme";
+import { Theme } from "../../config/Themes/Theme";
 
 export function About() {
   return (
@@ -113,8 +113,7 @@ export function About() {
                 background: "linear-gradient(90deg, #FF008E, #ffe600)",
                 display: "flex",
                 justifyContent: "center",
-                alignItems: "flex-end", 
-                
+                alignItems: "flex-end",
               }}
             >
               <img
@@ -122,10 +121,9 @@ export function About() {
                 alt="Ilustração de design"
                 style={{
                   position: "absolute",
-                  bottom: 0, 
+                  bottom: 0,
                   width: "100%",
                   height: "auto",
-                  
                 }}
               />
             </Box>
