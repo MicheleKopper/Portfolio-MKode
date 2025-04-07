@@ -21,11 +21,11 @@ export function Projects() {
       link: "/project01",
     },
     {
-      image: "mockup 02.png",
-      title: "Projeto 2",
-      categories: ["React", "TypeScript"],
+      image: "project02.png",
+      title: "Pokédex",
+      categories: ["React", "Redux Toolkit", "API REST", "Material UI"],
       description:
-        "Uma plataforma de recompensas de anúncios de realidade aumentada.",
+        "App que consome a PokéAPI para listar e favoritar Pokémons, com interface responsiva e gerenciamento de estado com Redux Toolkit.",
       link: "/project02",
     },
     {

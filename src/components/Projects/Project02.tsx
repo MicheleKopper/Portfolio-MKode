@@ -9,22 +9,22 @@ export function Project02() {
     {
       title: "Visão Geral",
       description:
-        "O cliente Limpa Tubo, especializado em dedetização e desentupimento, precisava de uma landing page estratégica para rodar campanhas no Google Ads. Como todos os contatos vinham dos anúncios, cada detalhe foi planejado para atrair, engajar e converter visitantes em clientes.",
+        "O projeto Pokédex é uma aplicação web desenvolvida como atividade final do módulo React III da Growdev. A proposta foi construir uma interface interativa para listar e explorar personagens do universo Pokémon, consumindo dados em tempo real da PokeAPI. O objetivo principal foi aplicar na prática os conhecimentos adquiridos sobre React com Material UI (MUI), gerenciamento de estado global com Redux Toolkit e chamadas assíncronas com Async Thunk.",
     },
     {
       title: "Desafio",
       description:
-        "O principal desafio foi desenvolver uma landing page altamente persuasiva e responsiva, que estimulasse os visitantes a clicarem no botão de WhatsApp para solicitar orçamentos. Além disso, era essencial otimizar o site para garantir alta velocidade de carregamento e bom desempenho nas campanhas de Google Ads, com foco em SEO.",
+        "O desafio foi desenvolver uma Pokédex interativa utilizando dados da PokeAPI, com listagem paginada, exibição de detalhes e adição de favoritos. A aplicação precisava ser responsiva, ter navegação fluida e uma boa experiência de uso. Além disso, foi necessário aplicar Redux Toolkit e Async Thunk para o gerenciamento de estado e requisições, organizando bem o código e publicando o projeto com deploy na Vercel e versionamento no GitHub.",
     },
     {
       title: "Solução",
       description:
-        "Design intuitivo e persuasivo, garantindo fácil navegação\nFront-end em React, para velocidade e interatividade\nBack-end em Node.js, eficiente na gestão de leads\nCTAs estratégicas para aumentar a conversão\nResponsividade para funcionar em qualquer dispositivo",
+        "Listagem de Pokémon: Com paginação, exibe nome, ID, altura e imagem de cada Pokémon, além de botão para adicioná-lo à Pokédex.\nPágina de Detalhes Dinâmica: Mostra informações detalhadas do Pokémon selecionado, como habilidades e stats (ataque, defesa etc.).\nPokedex Personalizada: Seção exclusiva onde o usuário vê sua coleção de favoritos com nome e imagem.\nEstilização com MUI: Interface moderna, responsiva e acessível.\nGerenciamento de Estado com Redux: Estados globais controlados com Redux Toolkit e chamadas assíncronas com AsyncThunk.\nDeploy e Versionamento: Projeto publicado na Vercel e com código-fonte disponível no GitHub.",
     },
     {
       title: "Resultados",
       description:
-        "Aumento na taxa de conversão dos visitantes para clientes\nRedução do tempo de carregamento da página\nMelhor desempenho nas campanhas pagas no Google Ads",
+        "Interface responsiva, leve e intuitiva.\nIntegração eficiente com a API pública da PokeAPI.\nGerenciamento de estados fluido com Redux, garantindo consistência na Pokédex entre páginas.\nProjeto hospedado na Vercel com deploy contínuo.\nCódigo-fonte publicado no GitHub.",
     },
   ];
 
@@ -55,7 +55,7 @@ export function Project02() {
               fontWeight: "bold",
             }}
           >
-            LANDING PAGE OTIMIZADA PARA CONVERSÃO
+            POKÉDEX
           </Typography>
         </Grid2>
 
@@ -147,7 +147,12 @@ export function Project02() {
 
         {/* Imagens do projeto */}
         <Grid2 container spacing={4} justifyContent="center" mt={6}>
-          {["mockup 01.png", "mockup 02.png"].map((src, index) => (
+          {[
+            "project02A.png",
+            "project02B.png",
+            "project02C.png",
+            "project02D.png",
+          ].map((src, index) => (
             <Grid2 key={index} size={{ xs: 12, md: 8 }}>
               <Box display="flex" justifyContent="center">
                 <img
@@ -211,7 +216,7 @@ export function Project02() {
             <Button
               variant="contained"
               endIcon={<GitHubIcon />}
-              href="https://github.com/MicheleKopper/LP-Limpa-Tubo"
+              href="https://github.com/MicheleKopper/Pokedex"
               target="_blank"
               aria-label="Ver repositório no GitHub"
               sx={{
