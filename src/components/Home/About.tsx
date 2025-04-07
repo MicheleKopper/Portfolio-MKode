@@ -12,9 +12,6 @@ export function About() {
     <ThemeProvider theme={Theme}>
       <Container
         sx={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
           paddingY: 8,
           color: "white",
         }}
@@ -22,19 +19,18 @@ export function About() {
         <Grid2
           container
           spacing={4}
-          sx={{
-            display: "flex",
-            flexDirection: "row",
-            alignItems: "center",
-            justifyContent: "space-between",
-          }}
+          sx={{ marginLeft: "50px" , marginRight:"50px", display: "flex", alignItems: "center" , justifyContent: "space-between"}}
+          
         >
-          {/* Texto */}
-          <Grid2 sx={{ flex: 1, maxWidth: "500px" }}>
+          {/* Coluna de Texto */}
+          <Grid2 size={{ xs: 12, md: 6 }}>
             <Typography
               sx={{
                 fontFamily: "Lato, sans-serif",
-                fontSize: "35px",
+                fontSize: {
+                  xs: "24px",
+                  md: "35px",
+                },
                 fontWeight: "700",
               }}
             >
@@ -45,9 +41,13 @@ export function About() {
               variant="body1"
               sx={{
                 marginTop: "20px",
+                fontSize: {
+                  xs: "14px",
+                  md: "16px",
+                },
               }}
             >
-              De designer e marketeira a Desenvolvedora Full Stack! <br></br>{" "}
+              De designer e marketeira a Desenvolvedora Full Stack! <br />
               Minha paixão vai além do design - combino criatividade e
               tecnologia para construir soluções digitais inovadoras.
             </Typography>
@@ -58,6 +58,10 @@ export function About() {
                 display: "flex",
                 alignItems: "center",
                 marginTop: "10px",
+                fontSize: {
+                  xs: "14px",
+                  md: "16px",
+                },
                 "&::before": {
                   content: '"•"',
                   marginRight: "8px",
@@ -74,6 +78,10 @@ export function About() {
               sx={{
                 display: "flex",
                 alignItems: "center",
+                fontSize: {
+                  xs: "14px",
+                  md: "16px",
+                },
                 "&::before": {
                   content: '"•"',
                   marginRight: "8px",
@@ -90,6 +98,10 @@ export function About() {
               sx={{
                 display: "flex",
                 alignItems: "center",
+                fontSize: {
+                  xs: "14px",
+                  md: "16px",
+                },
                 "&::before": {
                   content: '"•"',
                   marginRight: "8px",
@@ -102,12 +114,22 @@ export function About() {
             </Typography>
           </Grid2>
 
-          {/* Imagem */}
-          <Grid2 sx={{ flex: 1, display: "flex", justifyContent: "flex-end" }}>
+          {/* Coluna da Imagem */}
+          <Grid2
+            size={{ xs: 12, md: 6 }}
+            sx={{
+              display: {
+                xs: "none",
+                md: "flex",
+              },
+              justifyContent: "center",
+            }}
+          >
             <Box
               sx={{
                 position: "relative",
-                width: "500px",
+                width: "100%",
+                maxWidth: "500px",
                 height: "300px",
                 borderRadius: "150px 0 0 150px",
                 background: "linear-gradient(90deg, #FF008E, #ffe600)",

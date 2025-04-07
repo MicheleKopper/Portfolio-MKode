@@ -28,7 +28,7 @@ export function Training() {
   ];
   return (
     <ThemeProvider theme={Theme}>
-      <Container sx={{ maxWidth: "100%", overflowX: "hidden" }}>
+      <Container sx={{ maxWidth: "100%", overflowX: "hidden", pt: 5, pb: 2 }}>
         {/* Chamada */}
         <Grid2 container alignItems="center">
           {/* Título */}
@@ -37,12 +37,10 @@ export function Training() {
             sx={{
               textAlign: "start",
               color: "#FF008E",
-              marginLeft: "50px",
+              ml: 6,
               fontFamily: '"Big Shoulders Display", sans-serif',
               fontSize: "32px",
               fontWeight: "bold",
-              display: "flex",
-              alignItems: "center",
             }}
           >
             FORMAÇÃO
@@ -54,8 +52,8 @@ export function Training() {
               flexGrow: 1,
               height: "3px",
               backgroundColor: "#121212",
-              marginLeft: "25px",
-              marginRight: "50px",
+              ml: 3,
+              mr: 6,
             }}
           />
         </Grid2>
@@ -66,13 +64,14 @@ export function Training() {
           sx={{
             display: "flex",
             justifyContent: "center",
-            marginTop: "50px",
-            alignItems: "center",
+            mt: 6,
+            alignItems: "stretch",
           }}
         >
           {training.map((training, index) => (
             <Grid2
               key={index}
+              size={{ xs: 12, sm: 6, md: 6, lg: 6 }}
               sx={{ display: "flex", justifyContent: "center" }}
             >
               <Card
@@ -80,8 +79,9 @@ export function Training() {
                   display: "flex",
                   flexDirection: "column",
                   alignItems: "center",
-                  width: 450,
-                  height: 380,
+                  width: "100%",
+                  maxWidth: 450,
+                  minHeight: 380,
                   bgcolor: "#000000",
                 }}
               >
@@ -98,31 +98,19 @@ export function Training() {
                     {training.position}
                   </Typography>
 
-                  <Typography
-                    variant="subtitle1"
-                    sx={{
-                      marginTop: "10px",
-                    }}
-                  >
+                  <Typography variant="subtitle1" sx={{ mt: 1 }}>
                     {training.company}
                   </Typography>
 
                   <Typography
                     variant="subtitle1"
-                    sx={{
-                      marginBottom: "15px",
-                    }}
+                    sx={{ mb: 2, fontWeight: "600" }}
                   >
-                    {training.date}{" "}
+                    {training.date}
                   </Typography>
 
-                  <Typography
-                    variant="body1"
-                    sx={{
-                      marginBottom: "10px",
-                    }}
-                  >
-                    {training.description}{" "}
+                  <Typography variant="body1">
+                    {training.description}
                   </Typography>
                 </CardContent>
               </Card>

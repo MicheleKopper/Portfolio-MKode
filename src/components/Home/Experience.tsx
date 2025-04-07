@@ -36,7 +36,7 @@ export function Experience() {
 
   return (
     <ThemeProvider theme={Theme}>
-      <Container sx={{ py: 5, maxWidth: "100%", overflowX: "hidden" }}>
+      <Container sx={{ pt: 5, pb: 2, maxWidth: "100%", overflowX: "hidden" }}>
         {/* Título */}
         <Grid2 container alignItems="center">
           <Typography
@@ -73,12 +73,13 @@ export function Experience() {
             display: "flex",
             justifyContent: "center",
             mt: 6,
-            alignItems: "center",
+            alignItems: "stretch",
           }}
         >
           {experiences.map((experience, index) => (
             <Grid2
               key={index}
+              size={{ xs: 12, sm: 6, md: 6, lg: 6 }}
               sx={{ display: "flex", justifyContent: "center" }}
             >
               <Card
@@ -86,19 +87,16 @@ export function Experience() {
                   display: "flex",
                   flexDirection: "column",
                   alignItems: "center",
-                  width: 450,
-                  height: 380,
+                  width: "100%",
+                  maxWidth: 450,
+                  minHeight: index > 1 ? 320 : 380,
                   bgcolor: "#000000",
                 }}
               >
                 <CardContent>
                   <Typography
                     variant="h6"
-                    sx={{
-                      fontSize: "18px",
-                      fontWeight: "600",
-                      color: "white",
-                    }}
+                    sx={{ fontSize: "18px", fontWeight: "600", color: "white" }}
                   >
                     {experience.position}
                   </Typography>

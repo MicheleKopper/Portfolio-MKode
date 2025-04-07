@@ -191,7 +191,7 @@ export function Icons() {
 
   return (
     <ThemeProvider theme={Theme}>
-      <Container>
+      <Container sx={{ py: 5, maxWidth: "100%", overflowX: "hidden" }}>
         {/* Título */}
         <Grid2 container alignItems="center" sx={{ mb: 3 }}>
           <Typography

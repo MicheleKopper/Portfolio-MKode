@@ -1,71 +1,65 @@
-import { Button, Grid2, ThemeProvider } from "@mui/material";
+import { Button, Grid2, Stack, ThemeProvider } from "@mui/material";
 import { Box, Card, CardContent, Container, Typography } from "@mui/material";
 import { Theme } from "../../config/Themes/Theme";
+import GitHubIcon from "@mui/icons-material/GitHub";
+import LanguageIcon from "@mui/icons-material/Language";
 
 export function Project01() {
-  const experiences = [
+  const projects = [
     {
-      position: "Desenvolvedora Full Stack | Designer",
-      company: "Autônoma",
-      date: "2023 - Presente",
+      title: "Visão Geral",
       description:
-        "Criação e desenvolvimento de sites, incluindo ajustes em plataformas existentes para otimização e melhor experiência do usuário. Desenvolvimento de layouts responsivos para websites, aplicativos e outras plataformas digitais. Criação de identidade visual para marcas, incluindo logomarcas, paleta de cores e tipografia. Produção de peças gráficas para redes sociais (banners, posts, infográficos) e materiais impressos (cartões de visita, folhetos, embalagens).",
+        "O cliente Limpa Tubo, especializado em dedetização e desentupimento, precisava de uma landing page estratégica para rodar campanhas no Google Ads. Como todos os contatos vinham dos anúncios, cada detalhe foi planejado para atrair, engajar e converter visitantes em clientes.",
     },
     {
-      position: "Gerente de Marketing",
-      company: "Agência Oriup (Grupo Jornal O Diário)",
-      date: "2020 - 2023",
+      title: "Desafio",
       description:
-        "Liderança da equipe de marketing, designers, analistas de tráfego, atendimento, audiovisual e programadores. Criação de identidade visual para eventos, incluindo layout de sites, logomarcas e materiais gráficos. Definição de planejamento estratégico de marketing e gestão de campanhas. Distribuição de orçamento para tráfego pago e publicidade. Aprovação de criativos e materiais de marketing.",
+        "O principal desafio foi desenvolver uma landing page altamente persuasiva e responsiva, que estimulasse os visitantes a clicarem no botão de WhatsApp para solicitar orçamentos. Além disso, era essencial otimizar o site para garantir alta velocidade de carregamento e bom desempenho nas campanhas de Google Ads, com foco em SEO.",
     },
     {
-      position: "Coordenadora de Marketing",
-      company: "Sigma Comércio e Serviços",
-      date: "2016 - 2019",
+      title: "Solução",
       description:
-        "Criação de campanhas de marketing digital, incluindo artes, vídeos e conteúdos publicitários. Coordenação da equipe e SAC – Serviço de Atendimento ao Consumidor. Controle de indicadores de desempenho e planejamento estratégico.",
+        "Design intuitivo e persuasivo, garantindo fácil navegação\nFront-end em React, para velocidade e interatividade\nBack-end em Node.js, eficiente na gestão de leads\nCTAs estratégicas para aumentar a conversão\nResponsividade para funcionar em qualquer dispositivo",
     },
     {
-      position: "Auxiliar Administrativo",
-      company: "Terraplanagem Irmãos Kopper",
-      date: "2013 - 2016",
+      title: "Resultados",
       description:
-        "Contas a pagar e receber, controle de caixa, efetuar/atender telefonemas, cobranças, serviços bancários, orçamentos e contratos, entrega de folha de pagamento, e emissão de notas fiscais, MTR e boletos.",
+        "Aumento na taxa de conversão dos visitantes para clientes\nRedução do tempo de carregamento da página\nMelhor desempenho nas campanhas pagas no Google Ads",
     },
   ];
 
   return (
     <ThemeProvider theme={Theme}>
-      <Container sx={{ maxWidth: "100%", overflowX: "hidden" }}>
+      <Container
+        sx={{
+          maxWidth: "100%",
+          overflowX: "hidden",
+          px: { xs: 2, sm: 4, md: 8 },
+        }}
+      >
         {/* Título */}
-        <Grid2 container alignItems="center">
+        <Grid2
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+            textAlign: "center",
+            mt: 4,
+          }}
+        >
           <Typography
             variant="h4"
             sx={{
-              textAlign: "start",
               color: "#FF008E",
-              ml: 6,
               fontFamily: '"Big Shoulders Display", sans-serif',
-              fontSize: "32px",
+              fontSize: { xs: "24px", md: "32px" },
               fontWeight: "bold",
             }}
           >
-            EXPERIÊNCIA
+            LANDING PAGE OTIMIZADA PARA CONVERSÃO
           </Typography>
-
-          {/* Linha ao lado do título */}
-          <Box
-            sx={{
-              flexGrow: 1,
-              height: "3px",
-              backgroundColor: "#121212",
-              ml: 3,
-              mr: 6,
-            }}
-          />
         </Grid2>
 
-        {/* Cards de experiência */}
+        {/* Cards */}
         <Grid2
           container
           spacing={6}
@@ -73,21 +67,24 @@ export function Project01() {
             display: "flex",
             justifyContent: "center",
             mt: 6,
-            alignItems: "center",
+            alignItems: "stretch",
           }}
         >
-          {experiences.map((experience, index) => (
+          {projects.map((project, index) => (
             <Grid2
               key={index}
+              size={{ xs: 12, sm: 10, md: 6, lg: 4 }}
               sx={{ display: "flex", justifyContent: "center" }}
             >
               <Card
                 sx={{
+                  textAlign: "left",
                   display: "flex",
                   flexDirection: "column",
-                  alignItems: "center",
-                  width: 450,
-                  height: 380,
+                  alignItems: "flex-start",
+                  width: "100%",
+                  maxWidth: 450,
+                  height: "100%",
                   bgcolor: "#000000",
                 }}
               >
@@ -98,25 +95,41 @@ export function Project01() {
                       fontSize: "18px",
                       fontWeight: "600",
                       color: "white",
+                      mb: 2,
                     }}
                   >
-                    {experience.position}
+                    {project.title}
                   </Typography>
-                  <Typography variant="subtitle1" sx={{ mt: 1 }}>
-                    {experience.company}
-                  </Typography>
-                  <Typography
-                    variant="subtitle1"
-                    sx={{ mb: 2, fontWeight: "600" }}
-                  >
-                    {experience.date}
-                  </Typography>
-                  <Typography variant="body1">
-                    {experience.description}
-                  </Typography>
+
+                  {["Solução", "Resultados"].includes(project.title) ? (
+                    project.description.split("\n").map((item, index) => (
+                      <Box
+                        key={index}
+                        component="div"
+                        sx={{
+                          display: "flex",
+                          alignItems: "start",
+                          "&::before": {
+                            content: '"•"',
+                            marginRight: "8px",
+                            fontSize: "15px",
+                            color: "#FF008E",
+                            lineHeight: 1.5,
+                          },
+                        }}
+                      >
+                        <Typography variant="body1" color="white">
+                          {item}
+                        </Typography>
+                      </Box>
+                    ))
+                  ) : (
+                    <Typography variant="body1" color="white">
+                      {project.description}
+                    </Typography>
+                  )}
                 </CardContent>
 
-                {/* Linha abaixo do conteúdo */}
                 {index < 2 && (
                   <Box
                     sx={{
@@ -131,24 +144,90 @@ export function Project01() {
             </Grid2>
           ))}
         </Grid2>
+
+        {/* Imagens do projeto */}
+        <Grid2 container spacing={4} justifyContent="center" mt={6}>
+          {["mockup 01.png", "mockup 02.png"].map((src, index) => (
+            <Grid2 key={index} size={{ xs: 12, md: 8 }}>
+              <Box display="flex" justifyContent="center">
+                <img
+                  src={src}
+                  alt={`Mockup ${index + 1}`}
+                  style={{
+                    width: "100%",
+                    maxWidth: "800px",
+                    height: "auto",
+                  }}
+                />
+              </Box>
+            </Grid2>
+          ))}
+        </Grid2>
+
         {/* Link do Projeto */}
-        <Box textAlign="center" mt={2}>
-          <Typography variant="h6" fontWeight="bold" color="white">
-            Acesse o projeto:
-          </Typography>
-          <Button
-            variant="contained"
-            href="https://lnkd.in/dMf9mYw3"
-            target="_blank"
+        <Box sx={{ textAlign: "center", mt: 6, mb: 6 }}>
+          <Typography
+            variant="h6"
             sx={{
-              backgroundColor: "#FF008E",
+              fontSize: { xs: "20px", md: "25px" },
+              fontWeight: 600,
               color: "white",
-              mt: 1,
-              "&:hover": { backgroundColor: "#D00070" },
+              fontFamily: '"Big Shoulders Display", sans-serif',
             }}
           >
-            Ver Landing Page no ar
-          </Button>
+            ACESSE O PROJETO
+          </Typography>
+
+          <Stack
+            direction={{ xs: "column", sm: "row" }}
+            sx={{
+              mt: 2,
+              display: "flex",
+              gap: 2,
+              alignItems: "center",
+              justifyContent: "center",
+            }}
+          >
+            <Button
+              variant="contained"
+              endIcon={<LanguageIcon />}
+              href="https://limpatubo.com.br/dedetizadora/"
+              target="_blank"
+              aria-label="Ver projeto da landing page"
+              sx={{
+                fontFamily: '"Lato", sans-serif',
+                fontSize: "14px",
+                fontWeight: "500",
+                backgroundColor: "#FF008E",
+                color: "white",
+                px: 3,
+                transition: "background-color 0.3s ease",
+                "&:hover": { backgroundColor: "#D00070" },
+              }}
+            >
+              Landing Page
+            </Button>
+
+            <Button
+              variant="contained"
+              endIcon={<GitHubIcon />}
+              href="https://github.com/MicheleKopper/LP-Limpa-Tubo"
+              target="_blank"
+              aria-label="Ver repositório no GitHub"
+              sx={{
+                fontFamily: '"Lato", sans-serif',
+                fontSize: "14px",
+                fontWeight: "500",
+                backgroundColor: "#FF008E",
+                color: "white",
+                px: 3,
+                transition: "background-color 0.3s ease",
+                "&:hover": { backgroundColor: "#D00070" },
+              }}
+            >
+              GitHub
+            </Button>
+          </Stack>
         </Box>
       </Container>
     </ThemeProvider>

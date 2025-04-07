@@ -25,6 +25,16 @@ export const Theme = createTheme({
       fontWeight: "600",
       color: "#505050",
     },
-   
+    subtitle2: {
+      fontSize: "15px",
+      fontWeight: "400",
+      color: "#505050",
+    },
+    body2: {
+      fontSize: "14px",
+      fontWeight: "400",
+
+      color: "#505050",
+    },
   },
 });
