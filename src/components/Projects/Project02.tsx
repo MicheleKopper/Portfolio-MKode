@@ -73,7 +73,7 @@ export function Project02() {
           {projects.map((project, index) => (
             <Grid2
               key={index}
-              size={{ xs: 12, sm: 10, md: 6, lg: 4 }}
+              size={{ xs: 12, sm: 6, md: 6, lg: 6 }}
               sx={{ display: "flex", justifyContent: "center" }}
             >
               <Card
@@ -196,7 +196,7 @@ export function Project02() {
             <Button
               variant="contained"
               endIcon={<LanguageIcon />}
-              href="https://limpatubo.com.br/dedetizadora/"
+              href="https://pokedex-pqkncqwzl-michelekoppers-projects.vercel.app/home"
               target="_blank"
               aria-label="Ver projeto da landing page"
               sx={{
@@ -210,7 +210,7 @@ export function Project02() {
                 "&:hover": { backgroundColor: "#D00070" },
               }}
             >
-              Landing Page
+              Pokédex
             </Button>
 
             <Button

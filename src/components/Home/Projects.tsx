@@ -29,36 +29,44 @@ export function Projects() {
       link: "/project02",
     },
     {
+      image: "project03.png",
+      title: "GrowTwitter API",
+      categories: [
+        "Node.js",
+        "Express",
+        "Prisma",
+        "JWT",
+        "API REST",
+        "Back-End",
+        "PostMan",
+      ],
+      description:
+        "API para autenticação de usuários, criação e interação com tweets, replies e sistema de seguidores. Inclui testes automatizados e documentação via Swagger.",
+      link: "/project03",
+    },
+    {
+      image: "project04.png",
+      title: "Rick and Morty API",
+      categories: ["Front-end", "Bootstrap", "JavaScript (Axios)"],
+      description:
+        "Aplicação web que consome a API de Rick and Morty para exibir personagens com cards interativos, modais de detalhes e paginação.",
+      link: "/project04",
+    },
+    {
       image: "mockup 01.png",
-      title: "Projeto 3",
-      categories: ["Next.js", "Tailwind"],
+      title: "Eventos e Aplicações",
+      categories: ["Design Gráfico", "UI Design", "Identidade Visual"],
       description:
-        "Uma plataforma de recompensas de anúncios de realidade aumentada.",
-      link: "#",
+        "Projetos criados para eventos e aplicações digitais, incluindo identidade visual, folders, materiais promocionais e telas de apps. Foco em comunicação clara, estética moderna e adaptação.",
+      link: "/project05",
     },
     {
-      image: "mockup 02.png",
-      title: "Projeto 4",
-      categories: ["Node.js", "Express"],
+      image: "project06.png",
+      title: "Logomarcas",
+      categories: ["Illustrator", "Photoshop", "Design Gráfico"],
       description:
-        "AUma plataforma de recompensas de anúncios de realidade aumentada.",
-      link: "#",
-    },
-    {
-      image: "mockup 01.png",
-      title: "Projeto 3",
-      categories: ["Next.js", "Tailwind"],
-      description:
-        "Uma plataforma de recompensas de anúncios de realidade aumentada.",
-      link: "#",
-    },
-    {
-      image: "mockup 02.png",
-      title: "Projeto 4",
-      categories: ["Node.js", "Express"],
-      description:
-        "Uma plataforma de recompensas de anúncios de realidade aumentada.",
-      link: "#",
+        "Coleção de logomarcas criadas para diferentes marcas e segmentos, com foco em identidade visual forte, originalidade e aplicação versátil.",
+      link: "/project06",
     },
   ];
 
