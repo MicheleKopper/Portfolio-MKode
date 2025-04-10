@@ -171,7 +171,7 @@ export function Projects() {
                     {project.title}
                   </Typography>
 
-                  <Typography variant="body2" sx={{ opacity: 0.7, mb: 1 }}>
+                  <Typography variant="body2" sx={{  mb: 1, fontWeight:"600"}}>
                     {project.categories.join(", ")}
                   </Typography>
 

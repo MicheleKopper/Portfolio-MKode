@@ -33,7 +33,6 @@ export const Theme = createTheme({
     body2: {
       fontSize: "14px",
       fontWeight: "400",
-
       color: "#505050",
     },
   },
