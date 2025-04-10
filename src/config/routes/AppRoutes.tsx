@@ -1,11 +1,12 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { Home } from "../../pages/Home";
-import { ProjectA } from "../../pages/ProjectA";
-import { ProjectB } from "../../pages/ProjectB";
-import { ProjectC } from "../../pages/ProjectC";
-import { ProjectD } from "../../pages/ProjectD";
-import { ProjectF } from "../../pages/ProjectF";
-import { ProjectE } from "../../pages/ProjectE";
+import { About } from "../../components/Home/About";
+import { Project01 } from "../../components/Projects/Project01";
+import { Project02 } from "../../components/Projects/Project02";
+import { Project03 } from "../../components/Projects/Project03";
+import { Project04 } from "../../components/Projects/Project04";
+import { Project05 } from "../../components/Projects/Project05";
+import { Project06 } from "../../components/Projects/Project06";
 
 const router = createBrowserRouter([
   {
@@ -13,28 +14,32 @@ const router = createBrowserRouter([
     element: <Home />,
   },
   {
+    path: "/about",
+    element: <About />,
+  },
+  {
     path: "/project01",
-    element: <ProjectA />,
+    element: <Project01 />,
   },
   {
     path: "/project02",
-    element: <ProjectB />,
+    element: <Project02 />,
   },
   {
     path: "/project03",
-    element: <ProjectC />,
+    element: <Project03 />,
   },
   {
     path: "/project04",
-    element: <ProjectD />,
+    element: <Project04 />,
   },
   {
     path: "/project05",
-    element: <ProjectE />,
+    element: <Project05 />,
   },
   {
     path: "/project06",
-    element: <ProjectF />,
+    element: <Project06 />,
   },
   {
     path: "/*",

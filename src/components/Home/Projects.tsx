@@ -53,7 +53,7 @@ export function Projects() {
       link: "/project04",
     },
     {
-      image: "mockup 01.png",
+      image: "project05.png",
       title: "Eventos e Aplicações",
       categories: ["Design Gráfico", "UI Design", "Identidade Visual"],
       description:

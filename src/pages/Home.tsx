@@ -12,11 +12,27 @@ export function Home() {
     <>
       <Navbar />
       <Banner />
-      <About />
-      <Icons />
-      <Projects />
-      <Experience />
-      <Training />
+
+      <div id="about">
+        <About />
+      </div>
+
+      <div id="icons">
+        <Icons />
+      </div>
+
+      <div id="projects">
+        <Projects />
+      </div>
+
+      <div id="experience">
+        <Experience />
+      </div>
+
+      <div id="training">
+        <Training />
+      </div>
+
       <Footer />
     </>
   );

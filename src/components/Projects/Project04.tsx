@@ -3,6 +3,8 @@ import { Box, Card, CardContent, Container, Typography } from "@mui/material";
 import { Theme } from "../../config/Themes/Theme";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LanguageIcon from "@mui/icons-material/Language";
+import { Navbar } from "../Home/Navbar";
+import { Footer } from "../Home/Footer";
 
 export function Project04() {
   const projects = [
@@ -30,6 +32,9 @@ export function Project04() {
 
   return (
     <ThemeProvider theme={Theme}>
+      <Navbar />
+      <Box sx={{ height: { xs: "56px", sm: "64px" } }} />
+
       <Container
         sx={{
           maxWidth: "100%",
@@ -235,6 +240,9 @@ export function Project04() {
           </Stack>
         </Box>
       </Container>
+
+      <Footer />
+      <Box sx={{ height: { xs: "56px", sm: "64px" } }} />
     </ThemeProvider>
   );
 }

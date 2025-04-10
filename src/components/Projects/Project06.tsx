@@ -1,6 +1,8 @@
 import { Grid2, ThemeProvider } from "@mui/material";
 import { Box, Card, CardContent, Container, Typography } from "@mui/material";
 import { Theme } from "../../config/Themes/Theme";
+import { Navbar } from "../Home/Navbar";
+import { Footer } from "../Home/Footer";
 
 export function Project06() {
   const projects = [
@@ -28,6 +30,9 @@ export function Project06() {
 
   return (
     <ThemeProvider theme={Theme}>
+      <Navbar />
+      <Box sx={{ height: { xs: "56px", sm: "64px" } }} />
+
       <Container
         sx={{
           maxWidth: "100%",
@@ -123,7 +128,7 @@ export function Project06() {
         {/* Imagens do projeto */}
         <Grid2 container spacing={4} justifyContent="center" mt={6}>
           {[
-            "project06.png",
+            "project06A.png",
             "project06B.png",
             "project06C.png",
             "project06D.png",
@@ -146,6 +151,9 @@ export function Project06() {
           ))}
         </Grid2>
       </Container>
+
+      <Footer />
+      <Box sx={{ height: { xs: "56px", sm: "64px" } }} />
     </ThemeProvider>
   );
 }

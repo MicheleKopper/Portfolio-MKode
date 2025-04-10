@@ -15,7 +15,9 @@ import "@fontsource/big-shoulders-display/500.css";
 import "@fontsource/big-shoulders-display/600.css";
 import "@fontsource/big-shoulders-display/700.css";
 import "@fontsource/big-shoulders-display/800.css";
-import "@fontsource/big-shoulders-display/900.css";
+import "@fontsource/big-shoulders-display/400.css";
+
+
 
 const styles: Record<string, CSSObject> = {
   "*": {
